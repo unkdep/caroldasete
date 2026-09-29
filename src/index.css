@@ -1680,3 +1680,17 @@ main,
 .floating-whatsapp{right:14px!important;bottom:14px!important;width:50px!important;height:50px!important;max-width:calc(100vw - 28px);box-sizing:border-box}
 }
 @media(max-width:380px){.reading-card-head{align-items:flex-start!important;flex-direction:column!important}.reading-book-button{width:100%}.mobile-menu nav button{font-size:27px}.floating-whatsapp{width:46px!important;height:46px!important}}
+@media(max-width:600px){
+.text-action{font-size:13px!important;gap:10px!important;padding:7px 2px 7px!important}
+.text-action svg{font-size:14px!important}
+.footer-networks a{font-size:13px!important;padding:15px 0!important;gap:10px!important}
+.footer-networks a>svg:first-child{font-size:14px!important}
+.footer-networks p{font-size:10px!important}
+}
+/* AUMENTO LEVE DOS LINKS AGENDAR + INSTAGRAM/TIKTOK NO DESKTOP */
+@media(min-width:601px){
+.text-action{font-size:13px!important;gap:10px!important;padding-bottom:7px!important}
+.text-action svg{font-size:14px!important}
+.footer-networks a{font-size:13px!important;padding:15px 0!important;gap:10px!important}
+.footer-networks a>svg:first-child{font-size:14px!important}
+}
