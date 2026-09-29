@@ -29,12 +29,12 @@ type Category = {
   readings: Reading[];
 };
 const WHATSAPP =
-  "https://wa.me/554196286493?text=Olá%20Carol%2C%20gostaria%20de%20agendar%20uma%20leitura.";
+  "https://wa.me/554187458716?text=Olá%20Carol%2C%20gostaria%20de%20agendar%20uma%20leitura.";
 const INSTAGRAM = "https://www.instagram.com/caroldasete/";
 const TIKTOK = "https://www.tiktok.com/@caroldasetesaias";
 const readingWhatsApp = (name: string, price: string) => {
   const message = `Olá Carol! Tenho interesse na leitura "${name}" no valor de ${price}. Gostaria de saber como funciona e agendar.`;
-  return `https://wa.me/554196286493?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/554187458716?text=${encodeURIComponent(message)}`;
 };
 const categories: Category[] = [
   {
@@ -329,12 +329,9 @@ function App() {
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="mobile-menu-inner">
-              <div className="mobile-menu-mark">
-                <img src="/logo.jpeg" alt="Carol da Sete" />
-              </div>
               <nav>
                 <button onClick={() => scrollTo("inicio")}>Início</button>
-                <button onClick={() => scrollTo("sobre")}>Carol</button>
+                <button onClick={() => scrollTo("sobre")}>Sobre mim</button>
                 <button onClick={() => scrollTo("leituras")}>Leituras</button>
                 <button onClick={() => scrollTo("consulta")}>Consulta</button>
               </nav>
@@ -465,6 +462,10 @@ function App() {
                               <article className="reading-card" key={reading.name}>
                                 <div className="reading-card-head">
                                   <span className="reading-price">{reading.price}</span>
+                                  <a href={readingWhatsApp(reading.name, reading.price)} target="_blank" rel="noreferrer" className="reading-book-button">
+                                    <FaWhatsapp />
+                                    AGENDAR
+                                  </a>
                                 </div>
                                 <h3>{reading.name}</h3>
                                 <p>{reading.description}</p>
@@ -494,10 +495,6 @@ function App() {
                                     </motion.div>
                                   )}
                                 </AnimatePresence>
-                                <a href={readingWhatsApp(reading.name, reading.price)} target="_blank" rel="noreferrer" className="reading-contact">
-                                  Quero essa leitura
-                                  <ArrowUpRight size={15} />
-                                </a>
                               </article>
                             );
                           })}
