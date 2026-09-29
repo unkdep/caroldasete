@@ -331,7 +331,7 @@ function App() {
             <div className="mobile-menu-inner">
               <nav>
                 <button onClick={() => scrollTo("inicio")}>Início</button>
-                <button onClick={() => scrollTo("sobre")}>Sobre mim</button>
+                <button onClick={() => scrollTo("sobre")}>Sobre</button>
                 <button onClick={() => scrollTo("leituras")}>Leituras</button>
                 <button onClick={() => scrollTo("consulta")}>Consulta</button>
               </nav>
