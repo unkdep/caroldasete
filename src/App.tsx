@@ -15,14 +15,12 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import "./index.css";
-
 type Reading = {
   name: string;
   price: string;
   description: string;
   details: string[];
 };
-
 type Category = {
   id: string;
   title: string;
@@ -30,17 +28,14 @@ type Category = {
   icon: React.ReactNode;
   readings: Reading[];
 };
-
 const WHATSAPP =
   "https://wa.me/554196286493?text=Olá%20Carol%2C%20gostaria%20de%20agendar%20uma%20leitura.";
 const INSTAGRAM = "https://www.instagram.com/caroldasete/";
 const TIKTOK = "https://www.tiktok.com/@caroldasetesaias";
-
 const readingWhatsApp = (name: string, price: string) => {
   const message = `Olá Carol! Tenho interesse na leitura "${name}" no valor de ${price}. Gostaria de saber como funciona e agendar.`;
   return `https://wa.me/554196286493?text=${encodeURIComponent(message)}`;
 };
-
 const categories: Category[] = [
   {
     id: "amor",
@@ -267,59 +262,34 @@ const categories: Category[] = [
     ],
   },
 ];
-
-function Candle({ side = "left" }: { side?: "left" | "right" }) {
-  return (
-    <div className={`candle-scene candle-${side}`} aria-hidden="true">
-      <div className="flame">
-        <span className="flame-core" />
-      </div>
-      <div className="wick" />
-      <div className="candle-body">
-        <span className="wax wax-one" />
-        <span className="wax wax-two" />
-      </div>
-      <div className="candle-glow" />
-    </div>
-  );
-}
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openCategory, setOpenCategory] = useState<string | null>("amor");
   const [openReading, setOpenReading] = useState<string | null>(null);
-
-
   useEffect(() => {
     let favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
-
     if (!favicon) {
       favicon = document.createElement("link");
       favicon.rel = "icon";
       document.head.appendChild(favicon);
     }
-
     favicon.type = "image/png";
     favicon.href = "/favicon.png";
   }, []);
-
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
-
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
-
   const toggleCategory = (id: string) => {
     setOpenCategory((current) => (current === id ? null : id));
     setOpenReading(null);
   };
-
   return (
     <div className="site">
       <header className="header">
@@ -330,19 +300,16 @@ function App() {
             </span>
             <span className="brand-name">Carol da Sete</span>
           </button>
-
           <nav className="desktop-nav" aria-label="Navegação principal">
             <button onClick={() => scrollTo("inicio")}>Início</button>
             <button onClick={() => scrollTo("leituras")}>Leituras</button>
             <button onClick={() => scrollTo("consulta")}>Consulta</button>
             <a href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram</a>
           </nav>
-
           <a className="header-contact" href={WHATSAPP} target="_blank" rel="noreferrer">
             Agendar
             <ArrowUpRight size={15} />
           </a>
-
           <button
             className={`menu-trigger ${menuOpen ? "active" : ""}`}
             onClick={() => setMenuOpen((value) => !value)}
@@ -352,7 +319,6 @@ function App() {
           </button>
         </div>
       </header>
-
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -366,14 +332,12 @@ function App() {
               <div className="mobile-menu-mark">
                 <img src="/logo.jpeg" alt="Carol da Sete" />
               </div>
-
               <nav>
                 <button onClick={() => scrollTo("inicio")}>Início</button>
                 <button onClick={() => scrollTo("sobre")}>Carol</button>
                 <button onClick={() => scrollTo("leituras")}>Leituras</button>
                 <button onClick={() => scrollTo("consulta")}>Consulta</button>
               </nav>
-
               <div className="mobile-socials">
                 <a href={INSTAGRAM} target="_blank" rel="noreferrer"><FaInstagram /> Instagram</a>
                 <a href={TIKTOK} target="_blank" rel="noreferrer"><FaTiktok /> TikTok</a>
@@ -383,30 +347,24 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
-
       <main>
         <section className="hero" id="inicio">
-
           <motion.div
             className="hero-copy"
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.48 }}
           >
-
             <h1>
               <span>Carol</span>
               <em>da Sete</em>
             </h1>
-
             <p className="hero-lead">
               O tarot como caminho para enxergar com mais clareza aquilo que o momento ainda não revelou.
             </p>
-
             <p className="hero-text">
               Leituras para questões afetivas, profissionais, financeiras e para os ciclos que pedem uma nova perspectiva.
             </p>
-
             <div className="hero-actions">
               <button className="primary-action" onClick={() => scrollTo("leituras")}>
                 Ver leituras
@@ -418,7 +376,6 @@ function App() {
               </a>
             </div>
           </motion.div>
-
           <motion.div
             className="hero-visual"
             initial={{ opacity: 0, x: 28 }}
@@ -428,9 +385,7 @@ function App() {
             <img src="/hero.png" alt="" aria-hidden="true" />
           </motion.div>
 </section>
-
         <section className="manifesto" id="sobre">
-
           <motion.div
             className="manifesto-title"
             initial={{ opacity: 0, x: -30 }}
@@ -440,7 +395,6 @@ function App() {
             <span>CAROL DA SETE</span>
             <h2>Entre cartas,<br />caminhos e <i>clareza.</i></h2>
           </motion.div>
-
           <motion.div
             className="manifesto-copy"
             initial={{ opacity: 0, y: 30 }}
@@ -456,14 +410,12 @@ function App() {
             <p>
               Nas cartas, busco trazer clareza, autoconhecimento e novas perspectivas para cada momento vivido.
             </p>
-
             <div className="manifesto-note">
               <ScrollText size={22} strokeWidth={1.15} />
               <span>Cada leitura parte de uma questão única. O método acompanha aquilo que você precisa compreender.</span>
             </div>
           </motion.div>
         </section>
-
         <section className="readings-section" id="leituras">
           <div className="readings-intro">
             <div>
@@ -471,11 +423,9 @@ function App() {
               <h2>Comece pela sua <i>questão.</i></h2>
             </div>
           </div>
-
           <div className="categories">
             {categories.map((category, categoryIndex) => {
               const isOpen = openCategory === category.id;
-
               return (
                 <motion.div
                   className={`category ${isOpen ? "category-open" : ""}`}
@@ -493,13 +443,11 @@ function App() {
                         <small>{category.subtitle}</small>
                       </span>
                     </div>
-
                     <span className="category-toggle">
                       {isOpen ? "FECHAR" : "VER MÉTODOS"}
                       <ChevronDown size={17} className={isOpen ? "chevron-open" : ""} />
                     </span>
                   </button>
-
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
@@ -513,16 +461,13 @@ function App() {
                           {category.readings.map((reading, index) => {
                             const readingId = `${category.id}-${index}`;
                             const readingOpen = openReading === readingId;
-
                             return (
                               <article className="reading-card" key={reading.name}>
                                 <div className="reading-card-head">
                                   <span className="reading-price">{reading.price}</span>
                                 </div>
-
                                 <h3>{reading.name}</h3>
                                 <p>{reading.description}</p>
-
                                 <button
                                   className="details-button"
                                   onClick={() => setOpenReading(readingOpen ? null : readingId)}
@@ -530,7 +475,6 @@ function App() {
                                   {readingOpen ? "Ocultar detalhes" : "O que a leitura analisa"}
                                   <ChevronDown size={15} className={readingOpen ? "chevron-open" : ""} />
                                 </button>
-
                                 <AnimatePresence initial={false}>
                                   {readingOpen && (
                                     <motion.div
@@ -550,7 +494,6 @@ function App() {
                                     </motion.div>
                                   )}
                                 </AnimatePresence>
-
                                 <a href={readingWhatsApp(reading.name, reading.price)} target="_blank" rel="noreferrer" className="reading-contact">
                                   Quero essa leitura
                                   <ArrowUpRight size={15} />
@@ -567,10 +510,8 @@ function App() {
             })}
           </div>
         </section>
-
         <section className="consultation" id="consulta">
-                    <Candle side="left" />
-          <Candle side="right" />
+            <div className="consultation-background" aria-hidden="true" />
 <motion.div
             className="consultation-copy"
             initial={{ opacity: 0, y: 30 }}
@@ -582,7 +523,6 @@ function App() {
             <p>
               Escolha o tema que mais se aproxima do que você vive agora. Se ainda não souber qual método faz sentido, fale comigo e eu te ajudo a encontrar a leitura adequada.
             </p>
-
             <div className="consultation-flow">
               <div>
                 <span><MessageCircle size={19} /></span>
@@ -597,7 +537,6 @@ function App() {
                 <p><strong>As cartas são abertas</strong> para a sua situação.</p>
               </div>
             </div>
-
             <a className="consultation-button" href={WHATSAPP} target="_blank" rel="noreferrer">
               Conversar com Carol
               <FaWhatsapp />
@@ -605,13 +544,11 @@ function App() {
           </motion.div>
         </section>
       </main>
-
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-logo">
             <img src="/logo.jpeg" alt="Carol da Sete" />
           </div>
-
           <div className="footer-call">
             <span>CAROL DA SETE</span>
             <h2>Quer conversar<br />sobre a sua <i>questão?</i></h2>
@@ -620,7 +557,6 @@ function App() {
               <ArrowUpRight size={17} />
             </a>
           </div>
-
           <div className="footer-networks">
             <p>Acompanhe meu trabalho</p>
             <a href={INSTAGRAM} target="_blank" rel="noreferrer">
@@ -631,13 +567,11 @@ function App() {
             </a>
           </div>
         </div>
-
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Carol da Sete</span>
           <button onClick={() => scrollTo("inicio")}>Voltar ao início ↑</button>
         </div>
       </footer>
-
       <a
         href={WHATSAPP}
         target="_blank"
@@ -650,5 +584,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

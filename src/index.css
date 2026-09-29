@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@400;500;600&display=swap");
-
 :root {
   font-family: "DM Sans", sans-serif;
   color: #eee5da;
   background: #090202;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
   --black: #080202;
   --black-soft: #0e0303;
   --wine: #270506;
@@ -19,18 +17,15 @@
   --muted: #a99b91;
   --line: rgba(184, 138, 69, 0.22);
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 78px;
 }
-
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -39,40 +34,32 @@ body {
   color: var(--cream);
   background: var(--black);
 }
-
 button,
 a {
   font: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-
 button {
   border: 0;
   cursor: pointer;
 }
-
 a {
   text-decoration: none;
 }
-
 ::selection {
   color: #fff;
   background: #641015;
 }
-
 ::-webkit-scrollbar {
   width: 7px;
 }
-
 ::-webkit-scrollbar-track {
   background: #080202;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #5a1214;
 }
-
 .site {
   min-height: 100vh;
   position: relative;
@@ -80,7 +67,6 @@ a {
     linear-gradient(rgba(7, 1, 1, 0.58), rgba(7, 1, 1, 0.66)),
     url("/fundo.png") center top / cover;
 }
-
 .site::before {
   content: "";
   position: absolute;
@@ -91,7 +77,6 @@ a {
     radial-gradient(circle at 75% 14%, rgba(111, 9, 13, 0.14), transparent 25%),
     radial-gradient(circle at 14% 57%, rgba(111, 9, 13, 0.1), transparent 27%);
 }
-
 .header,
 main,
 .footer,
@@ -99,9 +84,7 @@ main,
   position: relative;
   z-index: 1;
 }
-
 /* MENU */
-
 .header {
   position: fixed;
   inset: 0 0 auto;
@@ -110,7 +93,6 @@ main,
   border-bottom: 1px solid rgba(184, 138, 69, 0.15);
   backdrop-filter: blur(7px);
 }
-
 .header-inner {
   width: min(1240px, calc(100% - 48px));
   height: 78px;
@@ -119,7 +101,6 @@ main,
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
-
 .brand {
   justify-self: start;
   display: inline-flex;
@@ -127,7 +108,6 @@ main,
   gap: 12px;
   background: transparent;
 }
-
 .brand-logo {
   width: 46px;
   height: 46px;
@@ -136,21 +116,18 @@ main,
   border: 1px solid rgba(184, 138, 69, 0.45);
   box-shadow: 0 0 22px rgba(120, 12, 16, 0.13);
 }
-
 .brand-logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.5);
 }
-
 .brand-name {
   font-family: "Cormorant Garamond", serif;
   color: var(--gold-pale);
   font-size: 20px;
   letter-spacing: 0.04em;
 }
-
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -160,7 +137,6 @@ main,
   background: rgba(20, 3, 4, 0.35);
   border-radius: 999px;
 }
-
 .desktop-nav button,
 .desktop-nav a {
   padding: 9px 15px;
@@ -170,13 +146,11 @@ main,
   font-size: 11px;
   transition: 0.16s ease;
 }
-
 .desktop-nav button:hover,
 .desktop-nav a:hover {
   color: #e2c99c;
   background: rgba(184, 138, 69, 0.08);
 }
-
 .header-contact {
   justify-self: end;
   display: inline-flex;
@@ -190,12 +164,10 @@ main,
   letter-spacing: 0.13em;
   transition: 0.16s ease;
 }
-
 .header-contact:hover {
   color: #fff1d3;
   gap: 13px;
 }
-
 .menu-trigger {
   display: none;
   justify-self: end;
@@ -207,7 +179,6 @@ main,
   border: 1px solid rgba(184, 138, 69, 0.22);
   border-radius: 50%;
 }
-
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -217,7 +188,6 @@ main,
     linear-gradient(rgba(8, 1, 1, 0.78), rgba(8, 1, 1, 0.9)),
     url("/fundo.png") center / cover;
 }
-
 .mobile-menu-inner {
   min-height: calc(100vh - 78px);
   width: min(560px, calc(100% - 36px));
@@ -227,7 +197,6 @@ main,
   justify-content: center;
   padding: 35px 0;
 }
-
 .mobile-menu-mark {
   width: 72px;
   height: 72px;
@@ -236,19 +205,16 @@ main,
   border: 1px solid rgba(184, 138, 69, 0.4);
   margin-bottom: 35px;
 }
-
 .mobile-menu-mark img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.45);
 }
-
 .mobile-menu nav {
   display: flex;
   flex-direction: column;
 }
-
 .mobile-menu nav button {
   width: 100%;
   padding: 17px 0;
@@ -262,15 +228,12 @@ main,
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(32px, 8vw, 48px);
 }
-
-
 .mobile-socials {
   margin-top: 35px;
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
 }
-
 .mobile-socials a {
   display: flex;
   align-items: center;
@@ -278,13 +241,10 @@ main,
   color: #a99a90;
   font-size: 11px;
 }
-
 .mobile-socials svg {
   color: var(--gold);
 }
-
 /* HERO */
-
 .hero {
   width: min(1240px, calc(100% - 48px));
   min-height: 100vh;
@@ -296,7 +256,6 @@ main,
   gap: clamp(34px, 5vw, 72px);
   position: relative;
 }
-
 .hero::before {
   content: "";
   position: absolute;
@@ -308,13 +267,11 @@ main,
   filter: blur(16px);
   pointer-events: none;
 }
-
 .hero-copy {
   position: relative;
   z-index: 4;
   max-width: 650px;
 }
-
 .hero-pretitle {
   display: flex;
   align-items: center;
@@ -326,24 +283,20 @@ main,
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-
 .hero-pretitle svg {
   color: var(--gold-bright);
 }
-
 .hero h1 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   line-height: 0.77;
   letter-spacing: -0.055em;
 }
-
 .hero h1 span {
   display: block;
   font-size: clamp(92px, 10vw, 145px);
   color: #f0e5da;
 }
-
 .hero h1 em {
   display: block;
   margin-left: clamp(35px, 5vw, 80px);
@@ -352,7 +305,6 @@ main,
   font-size: clamp(67px, 7.2vw, 105px);
   font-weight: 400;
 }
-
 .hero-lead {
   max-width: 590px;
   margin-top: 43px;
@@ -361,7 +313,6 @@ main,
   font-size: clamp(21px, 2.2vw, 29px);
   line-height: 1.35;
 }
-
 .hero-text {
   max-width: 520px;
   margin-top: 16px;
@@ -370,14 +321,12 @@ main,
   font-weight: 300;
   line-height: 1.8;
 }
-
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 27px;
   margin-top: 31px;
 }
-
 .primary-action {
   min-height: 49px;
   padding: 0 22px;
@@ -392,12 +341,10 @@ main,
   font-weight: 600;
   transition: 0.16s ease;
 }
-
 .primary-action:hover {
   background: #c99b55;
   transform: translateY(-2px);
 }
-
 .text-action {
   display: inline-flex;
   align-items: center;
@@ -407,12 +354,9 @@ main,
   border-bottom: 1px solid rgba(184, 138, 69, 0.35);
   padding-bottom: 6px;
 }
-
 .text-action svg {
   color: var(--gold);
 }
-
-
 .hero-visual {
   position: relative;
   z-index: 3;
@@ -424,7 +368,6 @@ main,
   overflow: visible;
   pointer-events: none;
 }
-
 .hero-visual img {
   width: min(92%, 590px);
   max-height: 72vh;
@@ -438,7 +381,6 @@ main,
   transform: translate3d(0, 0, 0);
   transition: transform 0.22s ease, opacity 0.22s ease, filter 0.22s ease;
 }
-
 .hero:hover .hero-visual img {
   transform: translate3d(0, -3px, 0) scale(1.008);
   opacity: 0.74;
@@ -447,14 +389,7 @@ main,
     brightness(0.94)
     drop-shadow(0 18px 30px rgba(0, 0, 0, 0.22));
 }
-
-
-
-
-
-
 /* VELAS CSS */
-
 .candle-scene {
   position: absolute;
   z-index: 2;
@@ -463,19 +398,16 @@ main,
   opacity: 0.72;
   pointer-events: none;
 }
-
 .hero .candle-left {
   left: -65px;
   bottom: 8%;
 }
-
 .hero .candle-right {
   right: -50px;
   top: 24%;
   transform: scale(0.8);
   opacity: 0.46;
 }
-
 .flame {
   position: absolute;
   z-index: 4;
@@ -500,7 +432,6 @@ main,
   will-change: transform, opacity;
   animation: candleFlameMove 0.72s ease-in-out infinite alternate;
 }
-
 .flame-core {
   position: absolute;
   left: 5px;
@@ -513,7 +444,6 @@ main,
   transform-origin: 50% 100%;
   animation: candleCoreMove 0.58s ease-in-out infinite alternate;
 }
-
 .wick {
   position: absolute;
   z-index: 3;
@@ -523,7 +453,6 @@ main,
   height: 10px;
   background: #1a0b08;
 }
-
 .candle-body {
   position: absolute;
   z-index: 2;
@@ -536,7 +465,6 @@ main,
     linear-gradient(90deg, #160303, #4c090b 40%, #250405 70%, #0b0202);
   box-shadow: inset 6px 0 10px rgba(255, 67, 39, 0.035);
 }
-
 .candle-body::before {
   content: "";
   position: absolute;
@@ -548,7 +476,6 @@ main,
   background: #290607;
   box-shadow: inset 0 2px 4px rgba(184, 62, 30, 0.15);
 }
-
 .wax {
   position: absolute;
   top: 0;
@@ -556,23 +483,16 @@ main,
   background: #3b0708;
   border-radius: 0 0 5px 5px;
 }
-
 .wax-one {
   left: 8px;
   height: 25px;
 }
-
 .wax-two {
   right: 7px;
   height: 15px;
 }
-
 .candle-glow { display: none; }
-
-
-
 /* SOBRE, FORMATO EDITORIAL */
-
 .manifesto {
   width: min(1240px, calc(100% - 48px));
   min-height: 700px;
@@ -585,12 +505,9 @@ main,
   position: relative;
   border-top: 1px solid rgba(184, 138, 69, 0.15);
 }
-
-
 .manifesto-title {
   padding-top: 8px;
 }
-
 .manifesto-title > span,
 .micro-label {
   color: var(--gold);
@@ -598,7 +515,6 @@ main,
   font-size: 8px;
   letter-spacing: 0.23em;
 }
-
 .manifesto-title h2,
 .readings-intro h2,
 .consultation-copy h2,
@@ -610,7 +526,6 @@ main,
   font-weight: 400;
   line-height: 0.98;
 }
-
 .manifesto-title h2 i,
 .readings-intro h2 i,
 .consultation-copy h2 i,
@@ -618,11 +533,9 @@ main,
   color: var(--gold-pale);
   font-weight: 400;
 }
-
 .manifesto-copy {
   padding-top: 63px;
 }
-
 .manifesto-copy > p {
   margin-bottom: 19px;
   color: #aa9b92;
@@ -630,12 +543,10 @@ main,
   line-height: 1.9;
   font-weight: 300;
 }
-
 .manifesto-copy strong {
   color: #d1b88d;
   font-weight: 500;
 }
-
 .manifesto-note {
   margin-top: 34px;
   padding: 22px 0 22px 22px;
@@ -649,13 +560,10 @@ main,
   font-size: 18px;
   line-height: 1.45;
 }
-
 .manifesto-note svg {
   color: var(--gold);
 }
-
 /* LEITURAS */
-
 .readings-section {
   padding: 115px max(24px, calc((100vw - 1240px) / 2));
   background:
@@ -664,7 +572,6 @@ main,
   border-top: 1px solid rgba(184, 138, 69, 0.13);
   border-bottom: 1px solid rgba(184, 138, 69, 0.13);
 }
-
 .readings-intro {
   display: grid;
   grid-template-columns: 1fr;
@@ -672,30 +579,24 @@ main,
   gap: 60px;
   margin-bottom: 55px;
 }
-
 .readings-intro h2 {
   margin-top: 12px;
 }
-
-
 .categories {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 .category {
   overflow: hidden;
   border: 1px solid rgba(184, 138, 69, 0.16);
   background: rgba(15, 3, 3, 0.61);
   transition: border-color 0.16s ease, background 0.16s ease;
 }
-
 .category-open {
   border-color: rgba(184, 138, 69, 0.34);
   background: rgba(24, 4, 5, 0.69);
 }
-
 .category-header {
   width: 100%;
   padding: 24px 27px;
@@ -706,13 +607,11 @@ main,
   background: transparent;
   text-align: left;
 }
-
 .category-left {
   display: flex;
   align-items: center;
   gap: 17px;
 }
-
 .category-icon {
   flex: 0 0 43px;
   width: 43px;
@@ -723,7 +622,6 @@ main,
   border-radius: 50%;
   color: var(--gold);
 }
-
 .category-left strong {
   display: block;
   color: #e8ddd2;
@@ -731,7 +629,6 @@ main,
   font-size: 21px;
   font-weight: 500;
 }
-
 .category-left small {
   display: block;
   margin-top: 4px;
@@ -739,7 +636,6 @@ main,
   font-size: 11px;
   font-weight: 300;
 }
-
 .category-toggle {
   flex-shrink: 0;
   display: flex;
@@ -749,28 +645,23 @@ main,
   font-size: 8px;
   letter-spacing: 0.16em;
 }
-
 .category-toggle svg,
 .details-button svg {
   transition: transform 0.16s ease;
 }
-
 .chevron-open {
   transform: rotate(180deg);
 }
-
 .readings-wrapper,
 .reading-details {
   overflow: hidden;
 }
-
 .readings-grid {
   padding: 3px 27px 27px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 13px;
 }
-
 .reading-card {
   position: relative;
   padding: 26px;
@@ -778,31 +669,26 @@ main,
   background: linear-gradient(140deg, rgba(54, 7, 9, 0.52), rgba(10, 2, 2, 0.76));
   transition: 0.17s ease;
 }
-
 .reading-card:hover {
   border-color: rgba(184, 138, 69, 0.34);
   transform: translateY(-2px);
 }
-
 .reading-card-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .card-index {
   color: rgba(184, 138, 69, 0.42);
   font-family: "Cormorant Garamond", serif;
   font-size: 17px;
 }
-
 .reading-price {
   padding: 6px 9px;
   border: 1px solid rgba(184, 138, 69, 0.18);
   color: var(--gold-pale);
   font-size: 10px;
 }
-
 .reading-card h3 {
   margin-top: 22px;
   color: #e8ddd2;
@@ -810,7 +696,6 @@ main,
   font-size: 27px;
   font-weight: 500;
 }
-
 .reading-card > p {
   min-height: 43px;
   margin-top: 8px;
@@ -818,7 +703,6 @@ main,
   font-size: 11px;
   line-height: 1.7;
 }
-
 .details-button {
   margin-top: 18px;
   display: flex;
@@ -830,14 +714,12 @@ main,
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .reading-details > div {
   margin-top: 15px;
   padding: 13px 0;
   border-top: 1px solid rgba(184, 138, 69, 0.12);
   border-bottom: 1px solid rgba(184, 138, 69, 0.12);
 }
-
 .reading-details p {
   display: flex;
   gap: 9px;
@@ -847,7 +729,6 @@ main,
   font-size: 10px;
   line-height: 1.55;
 }
-
 .detail-mark {
   flex: 0 0 4px;
   width: 4px;
@@ -856,7 +737,6 @@ main,
   border-radius: 50%;
   background: var(--gold);
 }
-
 .reading-contact {
   margin-top: 18px;
   display: inline-flex;
@@ -868,13 +748,10 @@ main,
   text-transform: uppercase;
   transition: gap 0.16s ease;
 }
-
 .reading-contact:hover {
   gap: 12px;
 }
-
 /* CONSULTA */
-
 .consultation {
   width: min(1240px, calc(100% - 48px));
   min-height: 760px;
@@ -885,14 +762,12 @@ main,
   position: relative;
   align-items: center;
 }
-
 .consultation .candle-left {
   left: -38px;
   bottom: 12%;
   transform: scale(1.08);
   opacity: 0.72;
 }
-
 .consultation .candle-right {
   right: -38px;
   bottom: 12%;
@@ -900,18 +775,14 @@ main,
   transform: scale(1.08);
   opacity: 0.72;
 }
-
-
-
-
-
 .consultation-copy {
-  width: min(100%, 900px);
+  position: relative;
+  z-index: 1;
+  width: min(900px, calc(100% - 48px));
   max-width: 900px;
   margin: 0 auto;
   padding: 0 84px;
 }
-
 .consultation-copy > p {
   max-width: 650px;
   margin-top: 26px;
@@ -919,7 +790,6 @@ main,
   font-size: 13px;
   line-height: 1.9;
 }
-
 .consultation-flow {
   margin-top: 37px;
   display: grid;
@@ -927,35 +797,29 @@ main,
   border-top: 1px solid rgba(184, 138, 69, 0.15);
   border-bottom: 1px solid rgba(184, 138, 69, 0.15);
 }
-
 .consultation-flow > div {
   min-height: 145px;
   padding: 25px 22px;
   border-right: 1px solid rgba(184, 138, 69, 0.12);
 }
-
 .consultation-flow > div:last-child {
   border-right: 0;
 }
-
 .consultation-flow span {
   color: var(--gold);
 }
-
 .consultation-flow p {
   margin-top: 16px;
   color: #8e8179;
   font-size: 11px;
   line-height: 1.65;
 }
-
 .consultation-flow strong {
   display: block;
   margin-bottom: 4px;
   color: #d5c5b6;
   font-weight: 500;
 }
-
 .consultation-button {
   margin-top: 32px;
   display: inline-flex;
@@ -969,20 +833,16 @@ main,
   letter-spacing: 0.11em;
   transition: 0.16s ease;
 }
-
 .consultation-button:hover {
   background: #a87938;
   border-color: #a87938;
   color: #130503;
 }
-
 /* FOOTER */
-
 .footer {
   background: rgba(34, 5, 7, 0.94);
   border-top: 1px solid rgba(184, 138, 69, 0.15);
 }
-
 .footer-top {
   width: min(1240px, calc(100% - 48px));
   min-height: 360px;
@@ -992,7 +852,6 @@ main,
   gap: 60px;
   align-items: center;
 }
-
 .footer-logo {
   width: 150px;
   height: 150px;
@@ -1000,25 +859,21 @@ main,
   border-radius: 50%;
   border: 1px solid rgba(184, 138, 69, 0.27);
 }
-
 .footer-logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1.45);
 }
-
 .footer-call > span {
   color: var(--gold);
   font-size: 8px;
   letter-spacing: 0.23em;
 }
-
 .footer-call h2 {
   margin-top: 14px;
   font-size: clamp(43px, 4.5vw, 63px);
 }
-
 .footer-call > a {
   margin-top: 24px;
   display: inline-flex;
@@ -1031,12 +886,10 @@ main,
   border-bottom: 1px solid rgba(184, 138, 69, 0.4);
   padding-bottom: 7px;
 }
-
 .footer-networks {
   padding-left: 30px;
   border-left: 1px solid rgba(184, 138, 69, 0.14);
 }
-
 .footer-networks p {
   margin-bottom: 17px;
   color: #776b64;
@@ -1044,7 +897,6 @@ main,
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
-
 .footer-networks a {
   padding: 12px 0;
   display: grid;
@@ -1055,15 +907,12 @@ main,
   color: #b8a89e;
   font-size: 11px;
 }
-
 .footer-networks a:hover {
   color: var(--gold-pale);
 }
-
 .footer-networks a > svg:first-child {
   color: var(--gold);
 }
-
 .footer-bottom {
   min-height: 62px;
   width: min(1240px, calc(100% - 48px));
@@ -1075,13 +924,11 @@ main,
   color: #665b55;
   font-size: 9px;
 }
-
 .footer-bottom button {
   background: transparent;
   color: #8c7d73;
   font-size: 9px;
 }
-
 .floating-whatsapp {
   position: fixed;
   z-index: 80;
@@ -1098,117 +945,93 @@ main,
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
   transition: 0.16s ease;
 }
-
 .floating-whatsapp:hover {
   transform: translateY(-3px);
   background: #a87938;
   color: #120302;
 }
-
 @media (max-width: 1050px) {
   .desktop-nav {
     display: none;
   }
-
   .header-inner {
     grid-template-columns: 1fr auto auto;
     gap: 15px;
   }
-
   .menu-trigger {
     display: grid;
   }
-
   .hero {
     grid-template-columns: 1fr 1fr;
     gap: 45px;
   }
-
   .hero .candle-scene {
     display: none;
   }
-
   .manifesto {
     grid-template-columns: 0.2fr 0.8fr 1fr;
     gap: 35px;
   }
 }
-
 @media (max-width: 820px) {
   .header-contact {
     display: none;
   }
-
   .header-inner {
     grid-template-columns: 1fr auto;
   }
-
   .hero {
     min-height: auto;
     padding: 125px 0 90px;
     grid-template-columns: 1fr;
   }
-
   .hero-copy {
     max-width: 680px;
   }
-
   .hero-emblem {
     justify-self: start;
     max-width: 680px;
   }
-
   .hero-emblem-caption {
     justify-content: flex-start;
   }
-
   .manifesto {
     grid-template-columns: 1fr;
     min-height: auto;
     gap: 28px;
   }
-
   .manifesto-number {
     position: static;
     font-size: 70px;
   }
-
   .manifesto-copy {
     padding-top: 0;
   }
-
   .readings-intro {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .readings-intro > p {
     justify-self: start;
   }
-
   .readings-grid {
     grid-template-columns: 1fr;
   }
-
   .consultation {
     grid-template-columns: 1fr;
   }
-
   .consultation-side {
     display: none;
   }
-
   .consultation-copy {
     margin-left: 0;
   }
-
   .consultation .candle-left {
   left: -12px;
   bottom: 13%;
   transform: scale(1.16);
   opacity: 0.64;
 }
-
 .consultation .candle-right {
   right: -12px;
   bottom: 13%;
@@ -1217,12 +1040,10 @@ main,
   opacity: 0.64;
 }
 }
-
 @media (max-width: 600px) {
   html {
     scroll-padding-top: 68px;
   }
-
   .header-inner,
   .hero,
   .manifesto,
@@ -1231,173 +1052,136 @@ main,
   .footer-bottom {
     width: calc(100% - 30px);
   }
-
   .header-inner {
     height: 68px;
   }
-
   .brand-logo {
     width: 40px;
     height: 40px;
   }
-
   .brand-name {
     font-size: 18px;
   }
-
   .mobile-menu {
     padding-top: 68px;
   }
-
   .mobile-menu-inner {
     min-height: calc(100vh - 68px);
   }
-
   .hero {
     padding-top: 105px;
   }
-
   .hero h1 span {
     font-size: clamp(77px, 25vw, 105px);
   }
-
   .hero h1 em {
     margin-left: 20px;
     font-size: clamp(58px, 19vw, 80px);
   }
-
   .hero-lead {
     margin-top: 35px;
     font-size: 22px;
   }
-
   .hero-actions {
     align-items: flex-start;
     flex-direction: column;
   }
-
   .primary-action {
     width: 100%;
     justify-content: center;
   }
-
   .hero-emblem-label {
     text-align: left;
   }
-
   .hero-emblem-caption {
     gap: 11px;
     flex-wrap: wrap;
   }
-
   .manifesto {
     padding: 90px 0;
   }
-
   .manifesto-title h2,
   .readings-intro h2,
   .consultation-copy h2 {
     font-size: 46px;
   }
-
   .manifesto-note {
     font-size: 16px;
   }
-
   .readings-section {
     padding: 90px 15px;
   }
-
   .category-header {
     padding: 20px 16px;
     align-items: flex-start;
   }
-
   .category-left {
     gap: 12px;
   }
-
   .category-icon {
     flex-basis: 39px;
     width: 39px;
     height: 39px;
   }
-
   .category-left strong {
     font-size: 18px;
   }
-
   .category-left small {
     max-width: 195px;
     font-size: 9px;
     line-height: 1.5;
   }
-
   .category-toggle {
     margin-top: 11px;
     font-size: 0;
   }
-
   .readings-grid {
     padding: 2px 11px 12px;
   }
-
   .reading-card {
     padding: 22px 19px;
   }
-
   .reading-card h3 {
     font-size: 25px;
   }
-
   .consultation {
     min-height: auto;
     padding: 95px 0 125px;
   }
-
   .consultation-flow {
     grid-template-columns: 1fr;
   }
-
   .consultation-flow > div {
     min-height: auto;
     border-right: 0;
     border-bottom: 1px solid rgba(184, 138, 69, 0.11);
   }
-
   .consultation-flow > div:last-child {
     border-bottom: 0;
   }
-
   .consultation-button {
     width: 100%;
     justify-content: center;
   }
-
   .footer-top {
     padding: 70px 0 45px;
     grid-template-columns: 1fr;
   }
-
   .footer-logo {
     width: 100px;
     height: 100px;
   }
-
   .footer-call h2 {
     font-size: 46px;
   }
-
   .footer-networks {
     grid-column: auto;
   }
-
   .footer-bottom {
     padding: 20px 0;
     gap: 15px;
     flex-wrap: wrap;
   }
-
   .floating-whatsapp {
     right: 16px;
     bottom: 16px;
@@ -1407,10 +1191,6 @@ main,
 }
 .reading-card-head { justify-content: flex-end; }
 .card-index { display: none; }
-
-
-
-
 /* AJUSTE FINAL DAS VELAS */
 @media (max-width: 1050px) {
   .consultation .candle-left {
@@ -1418,14 +1198,12 @@ main,
     transform: scale(0.9);
     opacity: 0.42;
   }
-
   .consultation .candle-right {
     right: 2px;
     transform: scale(0.9);
     opacity: 0.42;
   }
 }
-
 @media (max-width: 720px) {
   .consultation .candle-left,
   .consultation .candle-right {
@@ -1433,23 +1211,19 @@ main,
     opacity: 0.3;
     bottom: 5%;
   }
-
   .consultation .candle-left {
     left: -10px;
   }
-
   .consultation .candle-right {
     right: -10px;
   }
 }
-
 @media (max-width: 500px) {
   .consultation .candle-left,
   .consultation .candle-right {
     display: none;
   }
 }
-
 /* LUZ LEVE DAS VELAS: sem blur animado e sem repaint pesado */
 .consultation .candle-scene::after {
   content: "";
@@ -1468,16 +1242,11 @@ main,
     transparent 70%
   );
 }
-
 .consultation .flame,
 .consultation .wick,
 .consultation .candle-body {
   position: absolute;
 }
-
-
-
-
 /* HOVERS LEVES */
 .brand-logo,
 .footer-logo,
@@ -1486,14 +1255,12 @@ main,
 .mobile-menu-mark {
   transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
 }
-
 .brand:hover .brand-logo,
 .footer-logo:hover,
 .mobile-menu-mark:hover {
   transform: translateY(-2px) scale(1.03);
   border-color: rgba(209, 166, 95, 0.58);
 }
-
 .brand-name,
 .manifesto-title h2 i,
 .readings-intro h2 i,
@@ -1502,7 +1269,6 @@ main,
 .hero h1 em {
   transition: color 0.18s ease, text-shadow 0.18s ease;
 }
-
 .brand:hover .brand-name,
 .manifesto-title:hover h2 i,
 .readings-intro:hover h2 i,
@@ -1512,40 +1278,32 @@ main,
   color: #e7c785;
   text-shadow: 0 0 16px rgba(184, 138, 69, 0.13);
 }
-
 .category-header:hover .category-icon {
   transform: translateY(-2px);
   border-color: rgba(209, 166, 95, 0.52);
   background: rgba(184, 138, 69, 0.05);
 }
-
 .category-header:hover .category-left strong {
   color: #f0e6dc;
 }
-
 .consultation-flow > div {
   transition: background-color 0.18s ease, transform 0.18s ease;
 }
-
 .consultation-flow > div:hover {
   background: rgba(184, 138, 69, 0.035);
   transform: translateY(-2px);
 }
-
 .consultation-flow > div:hover span {
   transform: translateY(-2px) scale(1.05);
 }
-
 .reading-price {
   transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
 }
-
 .reading-card:hover .reading-price {
   border-color: rgba(209, 166, 95, 0.42);
   background: rgba(184, 138, 69, 0.05);
   color: #e5c78e;
 }
-
 .footer-networks a svg,
 .mobile-socials a svg,
 .text-action svg,
@@ -1553,7 +1311,6 @@ main,
 .reading-contact svg {
   transition: transform 0.18s ease;
 }
-
 .footer-networks a:hover svg,
 .mobile-socials a:hover svg,
 .text-action:hover svg,
@@ -1561,51 +1318,40 @@ main,
 .reading-contact:hover svg {
   transform: translate(2px, -1px);
 }
-
-
 @media (max-width: 1050px) {
   .hero {
     grid-template-columns: 1fr 0.75fr;
     gap: 32px;
   }
-
   .hero-visual {
     min-height: 430px;
   }
-
   .hero-visual img {
     max-height: 64vh;
   }
 }
-
 @media (max-width: 820px) {
   .hero {
     grid-template-columns: 1fr;
   }
-
   .hero-visual {
     min-height: 360px;
     justify-content: center;
   }
-
   .hero-visual img {
     width: min(100%, 520px);
     max-height: 52vh;
     object-position: center bottom;
   }
 }
-
 @media (max-width: 600px) {
   .hero-visual {
     min-height: 290px;
   }
-
   .hero-visual img {
     width: min(100%, 420px);
   }
 }
-
-
 .hero h1 span,
 .hero h1 em {
   display: block;
@@ -1616,20 +1362,16 @@ main,
     letter-spacing 0.2s ease;
   transform-origin: left center;
 }
-
 .hero-copy:hover h1 span {
   transform: translateX(5px);
   color: #f5ebdf;
   letter-spacing: -0.045em;
 }
-
 .hero-copy:hover h1 em {
   transform: translateX(10px);
   color: #e4c27f;
   text-shadow: 0 0 18px rgba(184, 138, 69, 0.14);
 }
-
-
 /* AJUSTES FINAIS DE ALINHAMENTO E MOBILE */
 @media (max-width: 820px) {
   .hero {
@@ -1637,36 +1379,30 @@ main,
     gap: 10px;
     padding-bottom: 46px;
   }
-
   .hero-copy {
     max-width: 100%;
   }
-
   .hero-visual {
     min-height: 250px;
     margin-top: -8px;
     align-items: flex-start;
     justify-content: center;
   }
-
   .hero-visual img {
     width: min(86vw, 430px);
     max-height: 360px;
     object-position: center top;
     opacity: 0.58;
   }
-
   .hero:hover .hero-visual img {
     opacity: 0.64;
   }
-
   .consultation-copy {
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
     padding: 0 26px;
   }
-
   .consultation .candle-left {
     display: block;
     left: 50%;
@@ -1675,58 +1411,44 @@ main,
     transform: translateX(-50%) scale(0.8);
     opacity: 0.58;
   }
-
   .consultation .candle-right {
     display: none;
   }
 }
-
 @media (max-width: 600px) {
   .hero {
     padding-top: 98px;
     padding-bottom: 32px;
   }
-
   .hero-actions {
     gap: 16px;
   }
-
   .hero-visual {
     min-height: 210px;
     margin-top: -4px;
   }
-
   .hero-visual img {
     width: min(92vw, 390px);
     max-height: 300px;
   }
-
   .consultation {
     padding-bottom: 175px;
   }
-
   .consultation .candle-left {
     bottom: 10px;
     transform: translateX(-50%) scale(0.72);
     opacity: 0.52;
   }
 }
-
-
 @media (max-width: 500px) {
   .consultation .candle-left {
     display: block;
   }
-
   .consultation .candle-right {
     display: none;
   }
 }
-
 /* garante chama animada em condições normais */
-
-
-
 /* CHAMAS ACESAS E ANIMADAS */
 @keyframes candleFlameMove {
   0% {
@@ -1750,7 +1472,6 @@ main,
     opacity: 0.9;
   }
 }
-
 @keyframes candleCoreMove {
   0% {
     transform: translate3d(0, 0, 0) scaleY(0.94) scaleX(1.02);
@@ -1761,23 +1482,18 @@ main,
     opacity: 1;
   }
 }
-
 /* mantém a chama ligada mesmo se o sistema estiver com redução de movimento */
 .flame {
   animation: candleFlameMove 0.72s ease-in-out infinite alternate !important;
 }
-
 .flame-core {
   animation: candleCoreMove 0.58s ease-in-out infinite alternate !important;
 }
-
-
 /* DUAS VELAS TAMBÉM NO MOBILE */
 @media (max-width: 820px) {
   .consultation {
     padding-bottom: 135px;
   }
-
   .consultation .candle-left,
   .consultation .candle-right {
     display: block !important;
@@ -1786,56 +1502,45 @@ main,
     opacity: 0.52;
     transform: scale(0.72);
   }
-
   .consultation .candle-left {
     left: 10px;
     right: auto;
   }
-
   .consultation .candle-right {
     right: 10px;
     left: auto;
   }
 }
-
 @media (max-width: 600px) {
   .consultation {
     padding-bottom: 120px;
   }
-
   .consultation .candle-left,
   .consultation .candle-right {
     bottom: 8px;
     transform: scale(0.62);
     opacity: 0.46;
   }
-
   .consultation .candle-left {
     left: -2px;
   }
-
   .consultation .candle-right {
     right: -2px;
   }
 }
-
 @media (max-width: 420px) {
   .consultation .candle-left,
   .consultation .candle-right {
     transform: scale(0.56);
     opacity: 0.42;
   }
-
   .consultation .candle-left {
     left: -8px;
   }
-
   .consultation .candle-right {
     right: -8px;
   }
 }
-
-
 /* POSIÇÃO FINAL DAS VELAS NO DESKTOP */
 @media (min-width: 821px) {
   .consultation .candle-left {
@@ -1845,7 +1550,6 @@ main,
     transform: scale(1.04) !important;
     opacity: 0.7 !important;
   }
-
   .consultation .candle-right {
     right: 58px !important;
     left: auto !important;
@@ -1855,12 +1559,90 @@ main,
     opacity: 0.7 !important;
   }
 }
-
 /* CHAMA MAIS LENTA E NATURAL */
 .flame {
   animation: candleFlameMove 1.55s ease-in-out infinite alternate !important;
 }
-
 .flame-core {
   animation: candleCoreMove 1.15s ease-in-out infinite alternate !important;
+}
+/* CONSULTA — FUNDO BODE */
+.consultation {
+  overflow: hidden;
+  isolation: isolate;
+}
+.consultation-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(8, 1, 1, 0.22), rgba(8, 1, 1, 0.38)),
+    url("/fundobode.png") center bottom / cover no-repeat;
+}
+.consultation-copy {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .consultation-background {
+    background-position: center bottom;
+  }
+}
+/* CONSULTA — CORREÇÃO FINAL: UMA ÚNICA fundobode.png */
+.consultation {
+  width: 100% !important;
+  max-width: none !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+}
+/* Remove qualquer segunda arte/pseudo-elemento antigo */
+.consultation::before,
+.consultation::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+/* Remove as velas decorativas separadas: a arte já contém as velas */
+.consultation .candle-left,
+.consultation .candle-right {
+  display: none !important;
+}
+/* A ÚNICA imagem da seção */
+.consultation-background {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background-image: url("/fundobode.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center calc(100% + 55px) !important;
+  background-size: 100% auto !important;
+  opacity: 0.82 !important;
+}
+/* Texto, caixas e botão ficam por cima da imagem */
+.consultation-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(900px, calc(100% - 48px)) !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+/* CONSULTA — imagem inteira mais abaixo, sem cortar */
+.consultation {
+  min-height: 860px !important;
+  padding: 120px 0 0 !important;
+  align-items: start !important;
+}
+.consultation-background {
+  inset: 0 !important;
+  background-image: url("/fundobode.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  background-position: center bottom !important;
+  opacity: 0.82 !important;
+}
+.consultation-copy {
+  align-self: start !important;
 }
