@@ -134,7 +134,7 @@ main,
   gap: 8px;
   padding: 5px;
   border: 1px solid rgba(184, 138, 69, 0.12);
-  background: rgba(20, 3, 4, 0.35);
+  background: #500c11;
   border-radius: 999px;
 }
 .desktop-nav button,
@@ -1647,7 +1647,7 @@ main,
   align-self: start !important;
 }
 /* AJUSTES FINAIS — 29/09/2026 */
-.desktop-nav{font-size:14px;padding:7px 10px;background:rgba(32,8,7,.72);border:1px solid rgba(184,138,69,.18);border-radius:999px;box-shadow:0 10px 28px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+.desktop-nav{font-size:14px;padding:7px 10px;background:#500c11;border:1px solid rgba(184,138,69,.18);border-radius:999px;box-shadow:0 10px 28px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
 .desktop-nav button,.desktop-nav a{font-size:14px;padding:10px 16px}
 .reading-card-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important}
 .reading-book-button{min-width:112px;height:42px;padding:0 16px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(224,205,224,.28);color:#f1e7ef;text-decoration:none;font-size:10px;font-weight:700;letter-spacing:.05em;background:rgba(255,255,255,.015);transition:.18s ease}
